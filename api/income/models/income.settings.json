@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "incomes",
+  "info": {
+    "name": "Income",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "price_valuation": {
+      "type": "float"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "category": {
+      "model": "category"
+    },
+    "type_of_payment": {
+      "model": "type-of-payment"
+    },
+    "income_collection": {
+      "type": "integer"
+    },
+    "income_piece": {
+      "type": "float"
+    },
+    "price_valution_with_nds": {
+      "type": "float"
+    },
+    "the_supplier": {
+      "model": "the-supplier"
+    },
+    "expense_collection": {
+      "type": "float"
+    },
+    "expense_piece": {
+      "type": "float"
+    },
+    "product_finished": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

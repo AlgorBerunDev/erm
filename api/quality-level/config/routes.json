@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/quality-levels",
+      "handler": "quality-level.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quality-levels/count",
+      "handler": "quality-level.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/quality-levels/:id",
+      "handler": "quality-level.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/quality-levels",
+      "handler": "quality-level.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/quality-levels/:id",
+      "handler": "quality-level.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/quality-levels/:id",
+      "handler": "quality-level.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
