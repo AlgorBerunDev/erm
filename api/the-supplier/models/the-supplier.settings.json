@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "the_suppliers",
+  "info": {
+    "name": "The supplier"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "inn": {
+      "type": "string"
+    },
+    "account_number": {
+      "type": "string"
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "mfo": {
+      "type": "string"
+    },
+    "contact": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

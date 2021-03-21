@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categories",
+  "info": {
+    "name": "Category",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "unit_of_measurement_piece": {
+      "model": "unit-of-measurement"
+    },
+    "n_piece_to_collection": {
+      "type": "float"
+    },
+    "main_category": {
+      "model": "main-category"
+    },
+    "nds": {
+      "type": "float"
+    },
+    "unit_of_measurement_collection": {
+      "model": "unit-of-measurement"
+    }
+  }
+}

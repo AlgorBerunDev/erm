@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "expenses",
+  "info": {
+    "name": "Expense"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "income": {
+      "model": "income"
+    },
+    "expense_collection": {
+      "type": "float"
+    },
+    "expense_piece": {
+      "type": "float"
+    },
+    "customer": {
+      "model": "customer"
+    },
+    "expense_price": {
+      "type": "float"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quality_levels",
+  "info": {
+    "name": "Quality level",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {}
+}

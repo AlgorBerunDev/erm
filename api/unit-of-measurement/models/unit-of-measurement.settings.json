@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unit_of_measurements",
+  "info": {
+    "name": "Unit of measurement"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
