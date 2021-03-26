@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/expenses-totals",
+      "handler": "expenses-total.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/expenses-totals/count",
+      "handler": "expenses-total.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/expenses-totals/:id",
+      "handler": "expenses-total.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/expenses-totals",
+      "handler": "expenses-total.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/expenses-totals/:id",
+      "handler": "expenses-total.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/expenses-totals/:id",
+      "handler": "expenses-total.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

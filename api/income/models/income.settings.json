@@ -14,51 +14,61 @@
     "name": {
       "type": "string"
     },
+    "unit_of_measurement": {
+      "model": "unit-of-measurement"
+    },
+    "cost": {
+      "type": "float"
+    },
+    "quantities": {
+      "type": "float"
+    },
     "price": {
       "type": "float"
     },
-    "price_valuation": {
+    "vat_rates": {
       "type": "float"
     },
-    "image": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images"
-      ],
-      "plugin": "upload",
-      "required": false
-    },
-    "description": {
-      "type": "text"
-    },
-    "category": {
-      "model": "category"
-    },
-    "type_of_payment": {
-      "model": "type-of-payment"
-    },
-    "income_collection": {
-      "type": "integer"
-    },
-    "income_piece": {
+    "vat_rates_of_price": {
       "type": "float"
     },
-    "price_valution_with_nds": {
+    "total_price": {
       "type": "float"
+    },
+    "vendor_code": {
+      "type": "string"
     },
     "the_supplier": {
       "model": "the-supplier"
     },
-    "expense_collection": {
+    "payment_type": {
+      "type": "string"
+    },
+    "is_paid": {
+      "type": "boolean"
+    },
+    "how_much_paid": {
       "type": "float"
     },
-    "expense_piece": {
+    "description": {
+      "type": "string"
+    },
+    "discount_procent": {
       "type": "float"
     },
-    "product_finished": {
-      "type": "boolean",
-      "default": false
+    "discount_total": {
+      "type": "float"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

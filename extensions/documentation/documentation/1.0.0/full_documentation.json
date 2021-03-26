@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/21/2021 5:52:26 PM"
+    "x-generation-date": "03/26/2021 2:04:25 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1563,6 +1563,530 @@
         "summary": "",
         "tags": [
           "Expense"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/expenses-totals": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
+        ],
+        "parameters": [
+          {
+            "name": "_limit",
+            "in": "query",
+            "required": false,
+            "description": "Maximum number of results possible",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_sort",
+            "in": "query",
+            "required": false,
+            "description": "Sort according to a specific field.",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_start",
+            "in": "query",
+            "required": false,
+            "description": "Skip a specific number of entries (especially useful for pagination)",
+            "schema": {
+              "type": "integer"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "=",
+            "in": "query",
+            "required": false,
+            "description": "Get entries that matches exactly your input",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_ne",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are not equals to something",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lt",
+            "in": "query",
+            "required": false,
+            "description": "Get record that are lower than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_lte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are lower than or equal to a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gt",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_gte",
+            "in": "query",
+            "required": false,
+            "description": "Get records that are greater than  or equal a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_contains",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_containss",
+            "in": "query",
+            "required": false,
+            "description": "Get records that contains (case sensitive) a value",
+            "schema": {
+              "type": "string"
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_in",
+            "in": "query",
+            "required": false,
+            "description": "Get records that matches any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          },
+          {
+            "name": "_nin",
+            "in": "query",
+            "required": false,
+            "description": "Get records that doesn't match any value in the array of values",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "deprecated": false
+          }
+        ]
+      },
+      "post": {
+        "deprecated": false,
+        "description": "Create a new record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewExpenses-total"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/expenses-totals/count": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
+        ],
+        "parameters": []
+      }
+    },
+    "/expenses-totals/{id}": {
+      "get": {
+        "deprecated": false,
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "put": {
+        "deprecated": false,
+        "description": "Update a record",
+        "responses": {
+          "200": {
+            "description": "response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "properties": {
+                    "foo": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
+        ],
+        "requestBody": {
+          "description": "",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewExpenses-total"
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "deprecated": false,
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "delete": {
+        "deprecated": false,
+        "description": "Delete a record",
+        "responses": {
+          "200": {
+            "description": "deletes a single record based on the ID supplied",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "int64"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "summary": "",
+        "tags": [
+          "Expenses-total"
         ],
         "parameters": [
           {
@@ -7534,47 +8058,53 @@
               "name": {
                 "type": "string"
               },
+              "unit_of_measurement": {
+                "type": "string"
+              },
+              "cost": {
+                "type": "number"
+              },
+              "quantities": {
+                "type": "number"
+              },
               "price": {
                 "type": "number"
               },
-              "price_valuation": {
+              "vat_rates": {
                 "type": "number"
               },
-              "image": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "description": {
-                "type": "string"
-              },
-              "category": {
-                "type": "string"
-              },
-              "type_of_payment": {
-                "type": "string"
-              },
-              "income_collection": {
-                "type": "integer"
-              },
-              "income_piece": {
+              "vat_rates_of_price": {
                 "type": "number"
               },
-              "price_valution_with_nds": {
+              "total_price": {
                 "type": "number"
+              },
+              "vendor_code": {
+                "type": "string"
               },
               "the_supplier": {
                 "type": "string"
               },
-              "expense_collection": {
-                "type": "number"
+              "payment_type": {
+                "type": "string"
               },
-              "expense_piece": {
-                "type": "number"
-              },
-              "product_finished": {
+              "is_paid": {
                 "type": "boolean"
+              },
+              "how_much_paid": {
+                "type": "number"
+              },
+              "description": {
+                "type": "string"
+              },
+              "discount_procent": {
+                "type": "number"
+              },
+              "discount_total": {
+                "type": "number"
+              },
+              "image": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"
@@ -7587,11 +8117,127 @@
               }
             }
           },
-          "expense_collection": {
+          "unit_of_measurement": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "quantities": {
             "type": "number"
           },
-          "expense_piece": {
+          "price": {
             "type": "number"
+          },
+          "total_cost": {
+            "type": "number"
+          },
+          "vat_rates": {
+            "type": "number"
+          },
+          "vat_rates_of_total_cost": {
+            "type": "number"
+          },
+          "discount_procent": {
+            "type": "number"
+          },
+          "discount_total": {
+            "type": "number"
+          },
+          "bonus_procent": {
+            "type": "number"
+          },
+          "bonus_total": {
+            "type": "number"
+          },
+          "vat_rates_with_total_cost": {
+            "type": "number"
+          },
+          "total_amount": {
+            "type": "number"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "NewExpense": {
+        "properties": {
+          "income": {
+            "type": "string"
+          },
+          "unit_of_measurement": {
+            "type": "string"
+          },
+          "quantities": {
+            "type": "number"
+          },
+          "price": {
+            "type": "number"
+          },
+          "total_cost": {
+            "type": "number"
+          },
+          "vat_rates": {
+            "type": "number"
+          },
+          "vat_rates_of_total_cost": {
+            "type": "number"
+          },
+          "discount_procent": {
+            "type": "number"
+          },
+          "discount_total": {
+            "type": "number"
+          },
+          "bonus_procent": {
+            "type": "number"
+          },
+          "bonus_total": {
+            "type": "number"
+          },
+          "vat_rates_with_total_cost": {
+            "type": "number"
+          },
+          "total_amount": {
+            "type": "number"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "created_by": {
+            "type": "string"
+          },
+          "updated_by": {
+            "type": "string"
+          }
+        }
+      },
+      "Expenses-total": {
+        "required": [
+          "id"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
           },
           "customer": {
             "required": [
@@ -7630,8 +8276,29 @@
               }
             }
           },
-          "expense_price": {
+          "total_price": {
             "type": "number"
+          },
+          "total_vat_rates_of_price": {
+            "type": "number"
+          },
+          "total_price_with_vat_rates": {
+            "type": "number"
+          },
+          "total_discount": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "payment_type": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -7639,22 +8306,34 @@
           }
         }
       },
-      "NewExpense": {
+      "NewExpenses-total": {
         "properties": {
-          "income": {
-            "type": "string"
-          },
-          "expense_collection": {
-            "type": "number"
-          },
-          "expense_piece": {
-            "type": "number"
-          },
           "customer": {
             "type": "string"
           },
-          "expense_price": {
+          "total_price": {
             "type": "number"
+          },
+          "total_vat_rates_of_price": {
+            "type": "number"
+          },
+          "total_price_with_vat_rates": {
+            "type": "number"
+          },
+          "total_discount": {
+            "type": "number"
+          },
+          "total": {
+            "type": "number"
+          },
+          "description": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "payment_type": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -7679,155 +8358,48 @@
           "name": {
             "type": "string"
           },
+          "unit_of_measurement": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "cost": {
+            "type": "number"
+          },
+          "quantities": {
+            "type": "number"
+          },
           "price": {
             "type": "number"
           },
-          "price_valuation": {
+          "vat_rates": {
             "type": "number"
           },
-          "image": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "vat_rates_of_price": {
+            "type": "number"
           },
-          "description": {
+          "total_price": {
+            "type": "number"
+          },
+          "vendor_code": {
             "type": "string"
-          },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "unit_of_measurement_piece": {
-                "type": "string"
-              },
-              "n_piece_to_collection": {
-                "type": "number"
-              },
-              "main_category": {
-                "type": "string"
-              },
-              "nds": {
-                "type": "number"
-              },
-              "unit_of_measurement_collection": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "type_of_payment": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "income_collection": {
-            "type": "integer"
-          },
-          "income_piece": {
-            "type": "number"
-          },
-          "price_valution_with_nds": {
-            "type": "number"
           },
           "the_supplier": {
             "required": [
@@ -7872,15 +8444,90 @@
               }
             }
           },
-          "expense_collection": {
+          "payment_type": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "how_much_paid": {
             "type": "number"
           },
-          "expense_piece": {
+          "description": {
+            "type": "string"
+          },
+          "discount_procent": {
             "type": "number"
           },
-          "product_finished": {
-            "type": "boolean",
-            "default": false
+          "discount_total": {
+            "type": "number"
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -7893,42 +8540,50 @@
           "name": {
             "type": "string"
           },
+          "unit_of_measurement": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number"
+          },
+          "quantities": {
+            "type": "number"
+          },
           "price": {
             "type": "number"
           },
-          "price_valuation": {
+          "vat_rates": {
+            "type": "number"
+          },
+          "vat_rates_of_price": {
+            "type": "number"
+          },
+          "total_price": {
+            "type": "number"
+          },
+          "vendor_code": {
+            "type": "string"
+          },
+          "the_supplier": {
+            "type": "string"
+          },
+          "payment_type": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "how_much_paid": {
             "type": "number"
           },
           "description": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
-          },
-          "type_of_payment": {
-            "type": "string"
-          },
-          "income_collection": {
-            "type": "integer"
-          },
-          "income_piece": {
+          "discount_procent": {
             "type": "number"
           },
-          "price_valution_with_nds": {
+          "discount_total": {
             "type": "number"
-          },
-          "the_supplier": {
-            "type": "string"
-          },
-          "expense_collection": {
-            "type": "number"
-          },
-          "expense_piece": {
-            "type": "number"
-          },
-          "product_finished": {
-            "type": "boolean",
-            "default": false
           },
           "published_at": {
             "type": "string",

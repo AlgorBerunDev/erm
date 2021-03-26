@@ -525,155 +525,48 @@
           "name": {
             "type": "string"
           },
+          "unit_of_measurement": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "cost": {
+            "type": "number"
+          },
+          "quantities": {
+            "type": "number"
+          },
           "price": {
             "type": "number"
           },
-          "price_valuation": {
+          "vat_rates": {
             "type": "number"
           },
-          "image": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "vat_rates_of_price": {
+            "type": "number"
           },
-          "description": {
+          "total_price": {
+            "type": "number"
+          },
+          "vendor_code": {
             "type": "string"
-          },
-          "category": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "unit_of_measurement_piece": {
-                "type": "string"
-              },
-              "n_piece_to_collection": {
-                "type": "number"
-              },
-              "main_category": {
-                "type": "string"
-              },
-              "nds": {
-                "type": "number"
-              },
-              "unit_of_measurement_collection": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "type_of_payment": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "income_collection": {
-            "type": "integer"
-          },
-          "income_piece": {
-            "type": "number"
-          },
-          "price_valution_with_nds": {
-            "type": "number"
           },
           "the_supplier": {
             "required": [
@@ -718,15 +611,90 @@
               }
             }
           },
-          "expense_collection": {
+          "payment_type": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "how_much_paid": {
             "type": "number"
           },
-          "expense_piece": {
+          "description": {
+            "type": "string"
+          },
+          "discount_procent": {
             "type": "number"
           },
-          "product_finished": {
-            "type": "boolean",
-            "default": false
+          "discount_total": {
+            "type": "number"
+          },
+          "image": {
+            "required": [
+              "id",
+              "name",
+              "hash",
+              "mime",
+              "size",
+              "url",
+              "provider"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "alternativeText": {
+                "type": "string"
+              },
+              "caption": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "formats": {
+                "type": "object"
+              },
+              "hash": {
+                "type": "string"
+              },
+              "ext": {
+                "type": "string"
+              },
+              "mime": {
+                "type": "string"
+              },
+              "size": {
+                "type": "number"
+              },
+              "url": {
+                "type": "string"
+              },
+              "previewUrl": {
+                "type": "string"
+              },
+              "provider": {
+                "type": "string"
+              },
+              "provider_metadata": {
+                "type": "object"
+              },
+              "related": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
           },
           "published_at": {
             "type": "string",
@@ -739,42 +707,50 @@
           "name": {
             "type": "string"
           },
+          "unit_of_measurement": {
+            "type": "string"
+          },
+          "cost": {
+            "type": "number"
+          },
+          "quantities": {
+            "type": "number"
+          },
           "price": {
             "type": "number"
           },
-          "price_valuation": {
+          "vat_rates": {
+            "type": "number"
+          },
+          "vat_rates_of_price": {
+            "type": "number"
+          },
+          "total_price": {
+            "type": "number"
+          },
+          "vendor_code": {
+            "type": "string"
+          },
+          "the_supplier": {
+            "type": "string"
+          },
+          "payment_type": {
+            "type": "string"
+          },
+          "is_paid": {
+            "type": "boolean"
+          },
+          "how_much_paid": {
             "type": "number"
           },
           "description": {
             "type": "string"
           },
-          "category": {
-            "type": "string"
-          },
-          "type_of_payment": {
-            "type": "string"
-          },
-          "income_collection": {
-            "type": "integer"
-          },
-          "income_piece": {
+          "discount_procent": {
             "type": "number"
           },
-          "price_valution_with_nds": {
+          "discount_total": {
             "type": "number"
-          },
-          "the_supplier": {
-            "type": "string"
-          },
-          "expense_collection": {
-            "type": "number"
-          },
-          "expense_piece": {
-            "type": "number"
-          },
-          "product_finished": {
-            "type": "boolean",
-            "default": false
           },
           "published_at": {
             "type": "string",

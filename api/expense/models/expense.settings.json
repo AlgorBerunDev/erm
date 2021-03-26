@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "expenses",
   "info": {
-    "name": "Expense"
+    "name": "Expense",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -13,16 +14,40 @@
     "income": {
       "model": "income"
     },
-    "expense_collection": {
+    "unit_of_measurement": {
+      "model": "unit-of-measurement"
+    },
+    "quantities": {
       "type": "float"
     },
-    "expense_piece": {
+    "price": {
       "type": "float"
     },
-    "customer": {
-      "model": "customer"
+    "total_cost": {
+      "type": "float"
     },
-    "expense_price": {
+    "vat_rates": {
+      "type": "float"
+    },
+    "vat_rates_of_total_cost": {
+      "type": "float"
+    },
+    "discount_procent": {
+      "type": "float"
+    },
+    "discount_total": {
+      "type": "float"
+    },
+    "bonus_procent": {
+      "type": "float"
+    },
+    "bonus_total": {
+      "type": "float"
+    },
+    "vat_rates_with_total_cost": {
+      "type": "float"
+    },
+    "total_amount": {
       "type": "float"
     }
   }
