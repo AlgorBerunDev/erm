@@ -69,6 +69,15 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "is_finished": {
+      "type": "boolean"
+    },
+    "sold_quantity": {
+      "type": "float"
+    },
+    "profit": {
+      "type": "float"
     }
   }
 }

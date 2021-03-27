@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "03/26/2021 2:04:25 AM"
+    "x-generation-date": "03/27/2021 8:13:13 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8106,6 +8106,15 @@
               "image": {
                 "type": "string"
               },
+              "is_finished": {
+                "type": "boolean"
+              },
+              "sold_quantity": {
+                "type": "number"
+              },
+              "profit": {
+                "type": "number"
+              },
               "published_at": {
                 "type": "string"
               },
@@ -8172,6 +8181,52 @@
           "total_amount": {
             "type": "number"
           },
+          "expenses_total": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "customer": {
+                "type": "string"
+              },
+              "total_price": {
+                "type": "number"
+              },
+              "total_vat_rates_of_price": {
+                "type": "number"
+              },
+              "total_price_with_vat_rates": {
+                "type": "number"
+              },
+              "total_discount": {
+                "type": "number"
+              },
+              "total": {
+                "type": "number"
+              },
+              "description": {
+                "type": "string"
+              },
+              "is_paid": {
+                "type": "boolean"
+              },
+              "payment_type": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -8218,6 +8273,9 @@
           },
           "total_amount": {
             "type": "number"
+          },
+          "expenses_total": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -8529,6 +8587,15 @@
               }
             }
           },
+          "is_finished": {
+            "type": "boolean"
+          },
+          "sold_quantity": {
+            "type": "number"
+          },
+          "profit": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -8583,6 +8650,15 @@
             "type": "number"
           },
           "discount_total": {
+            "type": "number"
+          },
+          "is_finished": {
+            "type": "boolean"
+          },
+          "sold_quantity": {
+            "type": "number"
+          },
+          "profit": {
             "type": "number"
           },
           "published_at": {

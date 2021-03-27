@@ -49,6 +49,9 @@
     },
     "total_amount": {
       "type": "float"
+    },
+    "expenses_total": {
+      "model": "expenses-total"
     }
   }
 }

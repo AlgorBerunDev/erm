@@ -696,6 +696,15 @@
               }
             }
           },
+          "is_finished": {
+            "type": "boolean"
+          },
+          "sold_quantity": {
+            "type": "number"
+          },
+          "profit": {
+            "type": "number"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -750,6 +759,15 @@
             "type": "number"
           },
           "discount_total": {
+            "type": "number"
+          },
+          "is_finished": {
+            "type": "boolean"
+          },
+          "sold_quantity": {
+            "type": "number"
+          },
+          "profit": {
             "type": "number"
           },
           "published_at": {
