@@ -561,6 +561,9 @@
               "description": {
                 "type": "string"
               },
+              "bonus": {
+                "type": "integer"
+              },
               "published_at": {
                 "type": "string"
               },

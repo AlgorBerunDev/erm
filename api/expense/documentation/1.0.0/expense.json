@@ -560,9 +560,6 @@
               "the_supplier": {
                 "type": "string"
               },
-              "payment_type": {
-                "type": "string"
-              },
               "is_paid": {
                 "type": "boolean"
               },
@@ -589,6 +586,12 @@
               },
               "profit": {
                 "type": "number"
+              },
+              "payment_type": {
+                "type": "string"
+              },
+              "category": {
+                "type": "string"
               },
               "published_at": {
                 "type": "string"

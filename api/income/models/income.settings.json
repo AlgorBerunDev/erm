@@ -41,9 +41,6 @@
     "the_supplier": {
       "model": "the-supplier"
     },
-    "payment_type": {
-      "type": "string"
-    },
     "is_paid": {
       "type": "boolean"
     },
@@ -78,6 +75,12 @@
     },
     "profit": {
       "type": "float"
+    },
+    "payment_type": {
+      "model": "type-of-payment"
+    },
+    "category": {
+      "model": "category"
     }
   }
 }

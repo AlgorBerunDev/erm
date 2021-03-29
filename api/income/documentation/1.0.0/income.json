@@ -611,9 +611,6 @@
               }
             }
           },
-          "payment_type": {
-            "type": "string"
-          },
           "is_paid": {
             "type": "boolean"
           },
@@ -705,6 +702,68 @@
           "profit": {
             "type": "number"
           },
+          "payment_type": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "category": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string"
+              },
+              "unit_of_measurement_piece": {
+                "type": "string"
+              },
+              "n_piece_to_collection": {
+                "type": "number"
+              },
+              "main_category": {
+                "type": "string"
+              },
+              "nds": {
+                "type": "number"
+              },
+              "unit_of_measurement_collection": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -743,9 +802,6 @@
           "the_supplier": {
             "type": "string"
           },
-          "payment_type": {
-            "type": "string"
-          },
           "is_paid": {
             "type": "boolean"
           },
@@ -769,6 +825,12 @@
           },
           "profit": {
             "type": "number"
+          },
+          "payment_type": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
